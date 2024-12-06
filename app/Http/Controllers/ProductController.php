@@ -31,7 +31,7 @@ class ProductController extends Controller
     {
         $query = Product::query();
     
-        // Pencarian berdasarkan nama 
+        // Pencarian berdasarkan nama product
         if ($request->has('name')) {
             $query->where('name', 'like', '%' . $request->name . '%');
         }
